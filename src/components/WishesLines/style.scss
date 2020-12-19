@@ -1,0 +1,13 @@
+.whishes-lines {
+	background: #48597A;
+	& .line {
+		width: 100%;
+		margin-bottom: 10px;
+		& .line-text {
+			padding: 6px 20px;
+			color: #fff;
+			background: rgba(149, 168, 206, 0.19);
+			margin-right: 10px;
+		}
+	}
+}
