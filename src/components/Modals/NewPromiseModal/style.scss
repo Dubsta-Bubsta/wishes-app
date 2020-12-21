@@ -1,0 +1,43 @@
+.create-promise-modal {
+	padding: 30px 60px 20px 60px;
+	background: #fff;
+	width: 100%;
+	box-sizing: border-box;
+	& .promise-name {
+		font-family: Kaushan Script;
+		font-size: 34px;
+		line-height: 40px;
+		text-align: center;
+	}
+
+	& .promise-comment {
+		font-family: Roboto;
+		font-size: 16px;
+		line-height: 20px;
+		text-align: center;
+		color: #BBBBBB;
+		margin: 15px 0;
+		font-weight: 300;
+	}
+
+	& .submit-btn {
+		background: #7DAF6B;
+		border-radius: 10px;
+		font-family: Kaushan Script;
+		font-size: 22px;
+		padding: 12px 20px;
+		text-align: center;
+		color: #FFFFFF;
+		margin: 20px auto 0 auto;
+		display: block;
+		&:disabled {
+			opacity: .7;
+		}
+	}
+
+	& .grid-2 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 20px;
+	}
+}

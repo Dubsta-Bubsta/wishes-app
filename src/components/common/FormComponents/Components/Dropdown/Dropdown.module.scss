@@ -1,0 +1,129 @@
+.dropdown {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    & .activeElement {
+        width: 100%;
+		display: flex;
+        height: 100%;
+
+		padding: 13px 12px;
+		box-sizing: border-box;
+		font-family: 'Roboto';
+		font-size: 18px;
+		line-height: 16px;
+		color: #000;
+		background: #F8F8F8;
+		border-radius: 10px;
+        border: none!important;
+        
+        display: flex;
+        align-items: center;
+        &.withSearch {
+            padding: 0;
+        }
+
+
+        & .activeElementValue {
+            width: 100%;
+            &.placeholder {
+                color: #d6d6d6;
+                font-weight: 300;
+            }
+        }
+
+        & .activeElementButtons {
+           & .buttonsIcon {
+               margin-left: 10px;
+               transition: .3s;
+               display: flex;
+
+               & svg path {
+                   fill: #C4C4C4;
+               }
+
+                &.rotate {
+                   transform: rotate(180deg);
+                }
+           }
+
+        }
+    }
+
+    & .selector {
+        letter-spacing: 0.6px;
+    }
+
+    & .dropdownList {
+        z-index: 1;
+        max-height: 350px;
+        overflow-y: auto;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: 4px;
+        width: 100%;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 0px;
+        background: #F8F8F8;
+        & .selector {
+            font-family: 'Open Sans';
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            width: 100%;
+            padding: 10px 18px 11px 22px;
+            box-sizing: border-box;
+            z-index: 5;
+            background: #F8F8F8;
+
+            &.active {
+                background: #E0E0E0;
+            }
+            &.disabled {
+                background: rgb(214, 214, 214);
+                pointer-events: none;
+
+                & svg {
+                    display: none;
+                }
+
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        & .getMoreBtn {
+            margin: 15px auto;
+            display: block;
+            padding: 5px 10px;
+            border: 1px solid #000;
+            border-radius: 4px;
+        }
+
+       &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+        
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #1e1f2044;
+            border-radius: 5px;
+        }
+        
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            opacity: .5;
+        }
+        
+    }
+}

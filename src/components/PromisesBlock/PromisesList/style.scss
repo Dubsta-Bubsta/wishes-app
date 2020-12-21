@@ -1,0 +1,39 @@
+.promises-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 50px;
+	overflow: visible;
+	padding: 40px ;
+	& .promise-element {
+		background: #FFFFFF;
+		box-shadow: 0px 6px 10px 5px rgba(0, 0, 0, 0.1);
+		border-radius: 20px;
+		height: 100%;
+		width: 100%;
+		padding: 20px;
+		box-sizing: border-box;
+		& .promise-name {
+			font-family: Roboto;
+			font-size: 22px;
+			line-height: 26px;
+			color: #000000;
+		}
+		& .promise-details {
+			font-family: Roboto;
+			font-size: 16px;
+			line-height: 20px;
+			color: #B2B2B2;
+			margin: 8px 0 20px 0;
+		}
+		& .promise-content {
+			font-family: Roboto;
+			font-size: 16px;
+			line-height: 20px;
+
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 8;
+			-webkit-box-orient: vertical;
+		}
+	}
+}

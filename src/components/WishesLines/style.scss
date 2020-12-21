@@ -1,13 +1,55 @@
-.whishes-lines {
+.wishes-lines-holder {
 	background: #48597A;
-	& .line {
+
+	.wishes-lines {
 		width: 100%;
-		margin-bottom: 10px;
-		& .line-text {
-			padding: 6px 20px;
-			color: #fff;
-			background: rgba(149, 168, 206, 0.19);
-			margin-right: 10px;
+		overflow: hidden;
+		margin: 0 auto;
+		position: relative;
+	
+		.title {
+			font-family: Kaushan Script;
+			font-size: 60px;
+			line-height: 87px;
+			text-align: center;
+			color: #FFFFFF;
+		}
+	
+		& .lines {
+			padding: 10px 0;
+			& .line {
+				display: flex;
+				flex-wrap: nowrap;
+				width: 100%;
+				margin-bottom: 20px;
+				position: relative;
+
+				& .line-text {
+					border-radius: 6px;
+					white-space: nowrap;
+					padding: 11px 20px 10px 20px;
+					color: #fff;
+					background: rgba(149, 168, 206, 0.19);
+					margin-right: 20px;
+					font-size: 18px;
+				}
+
+				&:nth-child(1) {
+					left: 0;
+				}
+				&:nth-child(2) {
+					left: -50px;
+				}
+				&:nth-child(3) {
+					left: -100px;
+				}
+				&:nth-child(4) {
+					left: -150px;
+				}
+				&:nth-child(5) {
+					left: -200px;
+				}
+			}
 		}
 	}
 }

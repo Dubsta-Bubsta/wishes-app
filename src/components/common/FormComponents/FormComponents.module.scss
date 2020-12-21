@@ -1,0 +1,52 @@
+.formInput {
+	position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s;
+
+    &.error {
+        & input, & textarea {
+            border: 1px solid #ff5454;
+        }
+    }
+	& .errorText {
+		position: absolute;
+		right: 0;
+        bottom: -16px;
+        font-size: 12px;
+        color: #ff5454;
+    }
+}
+
+.requiredStar {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: #ff5454;
+    font-size: 32px;
+}
+
+input.styledInput, textarea.styledInput {
+    font-family: Roboto;
+    border: 1px solid #F8F8F8;
+    background: #F8F8F8;
+    border-radius: 10px;
+    padding: 8px 20px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000;
+	box-sizing: border-box;
+    transition: .4s;
+    &::placeholder {
+        color: #d6d6d6;
+        font-weight: 300;
+    }
+}
+
+textarea.styledInput {
+    height: 300px;
+    resize: none;
+}

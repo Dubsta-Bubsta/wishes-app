@@ -1,0 +1,60 @@
+.promise-modal {
+	padding: 30px 60px 20px 60px;
+	background: #fff;
+	width: 100%;
+	box-sizing: border-box;
+	min-width: 300px;
+	& .promise-name {
+		font-family: Kaushan Script;
+		font-size: 34px;
+		line-height: 40px;
+		text-align: center;
+
+		color: #000000;
+	}
+
+	& .promise-details {
+		display: flex;
+		margin: 10px 0 20px;
+		& .promise-detail {
+			font-family: Roboto;
+			font-size: 16px;
+			line-height: 20px;
+			text-align: center;
+			color: #BBBBBB;
+			margin-right: 20px;
+		}
+	}
+
+	& .promise-content {
+		font-family: Roboto;
+		font-size: 16px;
+		line-height: 20px;
+		color: #000000;
+		margin-bottom: 20px;
+	}
+
+	& .share-promise {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		& .share-text {
+			font-family: Roboto;
+			font-size: 16px;
+			color: #BBBBBB;
+			margin-right: 10px;
+		}
+		& .share-btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 12px;
+			border-radius: 100%;
+			background: #F8F8F8;
+				& img {
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+}

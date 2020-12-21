@@ -1,0 +1,12 @@
+.language-selector {
+	position: absolute;
+	top: 5px;
+	left: 20px;
+	z-index: 5;
+	& button {
+		cursor: pointer;
+		&:first-child {
+			margin-right: 15px;
+		}
+	}
+}

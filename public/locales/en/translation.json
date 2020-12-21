@@ -1,0 +1,20 @@
+{
+	"title": "Make your New Year resolution!",
+	"greetingsText": "Having troubles acheiving your goals for the year? Well, that’s a deal - we make them visible to everyone and undeletable, so that you’d have a lot more motivation for keeping your word 😁 Good luck!",
+	"iPromise": "I promise!",
+	"newPromiseModal": {
+		"title": "Time to make a promise",
+		"description": "Note that city and birth year fields are optional, but they will help others and you find the promise you made later!"
+	},
+	"promiseModal": {
+		"madePromiseText": " has made a promise",
+		"share": "Share the link to this promise"
+	},
+	"placeholders": {
+		"birth": "Birth year",
+		"country": "Country",
+		"name": "Name",
+		"promiseLength": "Here you leave a promise! (at least 20 symbols)",
+		"requiredField": "Required field"
+	}
+}
