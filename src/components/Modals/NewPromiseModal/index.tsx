@@ -30,10 +30,21 @@ const NewPromise: FC<PropsType> = ({ open, setOpen }) => {
 	const handleSubmit = async (promise: PromiseType, setSubmitting: (val: boolean) => void) => {
 		setSubmitting(true);
 
-		const response = await Axios.post(`${process.env.REACT_APP_API_URL}/create`, promise)
+		const primiseObj = {
+			name: promise.name.trim(),
+			promise: promise.promise.trim(),
+			
+		} as PromiseType
+		if (promise.bday) {
+			primiseObj.bday = promise.bday.trim()
+		}
+		if (promise.location) {
+			primiseObj.location = promise.location
+		}
+		const response = await Axios.post(`${process.env.REACT_APP_API_URL}/create`, primiseObj)
 		if (response.status === 200) {
-			history.push(`/?promiseId=${response.data.PromiseID}`)
 			setOpen(false)
+			history.push(`/?promiseId=${response.data.PromiseID}`)
 		}
 
 
@@ -50,6 +61,19 @@ const NewPromise: FC<PropsType> = ({ open, setOpen }) => {
 				validateOnChange={true}
 				initialValues={{ name: '', bday: '', promise: '' } as PromiseType}
 				validationSchema={validationSchema}
+				validate={values => {
+					const errors: Record<string, string> = {};
+
+					if (!values.name.trim()) {
+						errors.name = t("placeholders.requiredField")
+					}
+
+					if (!values.promise.trim()) {
+						errors.promise = t("placeholders.requiredField")
+					}
+
+					return errors;
+				}}
 				enableReinitialize={true}
 				onSubmit={(data: PromiseType, { setSubmitting }) => {
 					handleSubmit(data, setSubmitting)

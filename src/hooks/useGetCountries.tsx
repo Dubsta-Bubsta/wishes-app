@@ -32,7 +32,7 @@ export const useGetCountries = () => {
 				setCountries([])
 			}
 		})()
-	}, [searchText]);
+	}, [searchText, language]);
 
 	return {
 		searchText,

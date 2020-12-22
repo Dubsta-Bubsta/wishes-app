@@ -1,8 +1,10 @@
 .language-selector {
+	display: flex;
+	align-items: center;
 	position: absolute;
 	top: 5px;
 	left: 20px;
-	z-index: 5;
+	z-index: 2;
 	& button {
 		cursor: pointer;
 		&:first-child {

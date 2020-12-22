@@ -11,7 +11,16 @@
 		padding: 15px;
 		font-size: 16px;
 	}
-	& .location {
-		
+}
+
+@media all and (max-width: 768px) {
+	.search-block {
+		width: 100%;
+		height: auto;
+		grid-template-columns: 1fr;
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		width: calc(100% - 40px);
 	}
 }

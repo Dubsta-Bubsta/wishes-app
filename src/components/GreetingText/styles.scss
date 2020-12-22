@@ -9,3 +9,10 @@
 	margin: 50px auto;
 	max-width: 80%;
 }
+
+@media all and (max-width: 768px) {
+	.greeting-text {
+		margin: 40px auto;
+		max-width: 90%;
+	}
+}

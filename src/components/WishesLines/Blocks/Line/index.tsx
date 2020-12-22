@@ -1,8 +1,8 @@
 import Axios, { AxiosResponse } from 'axios'
 import React, { FC, useEffect, useState } from 'react'
+import styled from 'styled-components'
 import { PromiseType } from '../../../../types'
 import './style.scss'
-
 const Line = ({  }) => {
 	const [promises, setPromises] = useState<Array<PromiseType>>([])
 
@@ -17,7 +17,7 @@ const Line = ({  }) => {
 
 	return (
 		<div className="line">
-		   {promises.map(promise => <p className="line-text" key={promise.PromiseID}>{promise.promise}</p>)}
+		  	 {promises.map(promise => <p className="line-text" key={promise.PromiseID}>{promise.promise}</p>)}
 	   </div>
 	)
 }

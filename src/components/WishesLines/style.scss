@@ -1,28 +1,32 @@
 .wishes-lines-holder {
 	background: #48597A;
+	padding-top: 35px;
 
 	.wishes-lines {
 		width: 100%;
 		overflow: hidden;
 		margin: 0 auto;
 		position: relative;
-	
+
 		.title {
-			font-family: Kaushan Script;
+			font-family: Pacifico;
 			font-size: 60px;
 			line-height: 87px;
 			text-align: center;
 			color: #FFFFFF;
 		}
-	
+
 		& .lines {
 			padding: 10px 0;
+
 			& .line {
 				display: flex;
 				flex-wrap: nowrap;
 				width: 100%;
 				margin-bottom: 20px;
 				position: relative;
+				-webkit-animation: slidein 25s linear infinite;
+				animation: slidein 25s linear infinite;
 
 				& .line-text {
 					border-radius: 6px;
@@ -37,19 +41,74 @@
 				&:nth-child(1) {
 					left: 0;
 				}
+
 				&:nth-child(2) {
 					left: -50px;
 				}
+
 				&:nth-child(3) {
 					left: -100px;
 				}
+
 				&:nth-child(4) {
 					left: -150px;
 				}
+
 				&:nth-child(5) {
 					left: -200px;
 				}
 			}
 		}
 	}
+}
+
+
+
+@-webkit-keyframes slidein {
+	from {
+		-webkit-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+	to {
+		-webkit-transform: translate3d(-50%, 0, 0);
+		-ms-transform: translate3d(-50%, 0, 0);
+		transform: translate3d(-50%, 0, 0);
+	}
+}
+
+@keyframes slidein {
+	from {
+		-webkit-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+	to {
+		-webkit-transform: translate3d(-50%, 0, 0);
+		-ms-transform: translate3d(-50%, 0, 0);
+		transform: translate3d(-50%, 0, 0);
+	}
+}
+
+
+@media all and (max-width: 768px) {
+	.wishes-lines-holder {
+		.wishes-lines {
+			.title {
+				font-family: Pacifico;
+				font-size: 40px;
+				line-height: 57px;
+			}
+			& .lines {
+				& .line {
+					-webkit-animation: slidein 25s linear infinite;
+					animation: slidein 10s linear infinite;
+				}
+			}
+		}
+	}
+
+	
 }

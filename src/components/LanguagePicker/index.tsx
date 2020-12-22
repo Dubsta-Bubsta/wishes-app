@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import Cookies from 'js-cookie'
 import { Emoji } from 'emoji-mart'
 import './styles.scss'
+import PolicyLinks from '../PolicyLinks';
 
 
 const LanguagePicker = () => {
@@ -34,6 +35,8 @@ const LanguagePicker = () => {
 			<button onClick={() => changeLanguage('ru')}>
 				<Emoji emoji={':flag-ru:'} set='twitter' size={30} />
 			</button>
+
+			<PolicyLinks />
 		</div>
 	)
 }

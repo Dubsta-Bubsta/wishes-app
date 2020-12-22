@@ -19,6 +19,16 @@ const Popup = ({ open, setOpen, maxWidth = MaxWidthObject.sm, fullWidth = false,
 	const modalRef = useRef(null)
 
 	useEffect(() => {
+		if (open) {
+			document.querySelector('html').classList.add("hidden") 
+		} else {
+			document.querySelector('html').classList.remove("hidden") 
+		}
+		return () => { document.querySelector('html').classList.remove("hidden")  }
+ 
+	}, [open])
+
+	useEffect(() => {
 		document.addEventListener('click', (e) => {
 			if (modalRef.current && !modalRef.current.contains(e.target)) {
 				e.stopPropagation()

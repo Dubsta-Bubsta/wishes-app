@@ -16,5 +16,6 @@
 		"name": "Name",
 		"promiseLength": "Here you leave a promise! (at least 20 symbols)",
 		"requiredField": "Required field"
-	}
+	},
+	"policy": "Policy"
 }

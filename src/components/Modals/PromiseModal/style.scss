@@ -5,7 +5,7 @@
 	box-sizing: border-box;
 	min-width: 300px;
 	& .promise-name {
-		font-family: Kaushan Script;
+		font-family: Pacifico;
 		font-size: 34px;
 		line-height: 40px;
 		text-align: center;
@@ -54,6 +54,26 @@
 				& img {
 				width: 24px;
 				height: 24px;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 768px) {
+	.promise-modal {
+		margin: 0 auto;
+		padding: 20px;
+		min-width: auto;
+		& .promise-name {
+			font-size: 26px;
+			line-height: 34px;
+		}
+	
+		& .promise-details {
+			& .promise-detail {
+				font-family: Roboto;
+				font-size: 14px;
+				line-height: 18px;
 			}
 		}
 	}
