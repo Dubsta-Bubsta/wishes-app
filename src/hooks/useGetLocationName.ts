@@ -9,16 +9,20 @@ export const useGetLocation = (locationCode: string, setLocation: (loc: string) 
     useEffect(() => {
         (async () => {
             if (locationCode) {
+               try {
                 const response = await Axios.get(`
-                    http://geohelper.info/api/v1/countries?
-    				locale%5Blang%5D=${language}&
-    				filter%5Biso3%5D=${locationCode}&			
-                    apiKey=${process.env.REACT_APP_GEOHELPER_KEY}
-                `)
+                http://geohelper.info/api/v1/countries?
+                locale%5Blang%5D=${language}&
+                filter%5Biso3%5D=${locationCode}&			
+                apiKey=${process.env.REACT_APP_GEOHELPER_KEY}
+            `)
 
-                if (response.status === 200 && response.data.result.length) {
-                    setLocation(response.data.result[0].name)
-                }
+            if (response.status === 200 && response.data.result.length) {
+                setLocation(response.data.result[0].name)
+            }
+               } catch(e) {
+
+               }
             }
        })()
     }, [locationCode]);

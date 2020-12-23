@@ -27,17 +27,9 @@ export function handleMarquee() {
 					})
 				}
 				container.style.transform = 'translateX(' + progress + 'px)';
-				// container.style.transform += 'skewX(' + speed * 0.4 + 'deg)';
 				window.requestAnimationFrame(loop);
 			}
 			loop();
 		}
-
-		
 	});
 };
-
-
-const clone = (elements) => {
-
-}

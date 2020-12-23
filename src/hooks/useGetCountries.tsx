@@ -12,7 +12,8 @@ export const useGetCountries = () => {
 
 	useEffect(() => {
 		(async () => {
-			const response = await Axios.get(`
+			try {
+				const response = await Axios.get(`
 				http://geohelper.info/api/v1/countries?
 				locale%5Blang%5D=${language}&
 				filter%5Bname%5D=${searchText}&			
@@ -30,6 +31,9 @@ export const useGetCountries = () => {
 
 			} else {
 				setCountries([])
+			}
+			} catch(e) {
+				
 			}
 		})()
 	}, [searchText, language]);

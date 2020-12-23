@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
     "target": "es5",
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
     "lib": [
       "dom",
       "dom.iterable",
@@ -22,6 +20,6 @@
     "jsx": "react"
   },
   "include": [
-    "src", "src/components/Users/Brigades/Balance/.tsx"
+    "src"
   ]
 }

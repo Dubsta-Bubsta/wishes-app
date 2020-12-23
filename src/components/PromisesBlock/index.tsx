@@ -20,6 +20,7 @@ const PromisesBlock = () => {
     const [page, setPage] = useState(1)
     const [totalCount, setTotalCount] = useState(0)
     const [promises, setPromises] = useState<Array<PromiseType>>([])
+    const [hasMore, setHasMore] = useState(false)
     const [loading, setLoading] = useState(false)
     const limit = 15
 
@@ -33,7 +34,14 @@ const PromisesBlock = () => {
 		})();
 
 		return () => { source.cancel() }
-	}, [page, debouncedName, location, bday])
+    }, [page, debouncedName, location, bday])
+    
+
+    useEffect(() => {
+        console.log('q')
+        setPage(0)
+        setPage(1)
+    }, [debouncedName, location, bday])
 
 
     const getPromises = async (cancelToken: CancelToken) => {
@@ -53,11 +61,6 @@ const PromisesBlock = () => {
 				setPromises([...promises, ...response.data.Items])
             }
             setTotalCount(response.data.ScannedCount)
-            // if (response.data.LastEvaluatedKey) {
-            //     setHasMore(true)
-            // } else {
-            //     setHasMore(false)
-            // }
 		}
     }
     
