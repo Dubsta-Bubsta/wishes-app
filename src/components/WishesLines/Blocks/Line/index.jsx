@@ -11,7 +11,7 @@ const Line = ({  }) => {
 
 	useEffect(() => {
 		(async () => {
-			const response = await Axios.get(`${process.env.REACT_APP_API_URL}/get`, { params: { limit: 5 } }) 
+			const response = await Axios.get(`${process.env.REACT_APP_API_URL}/get`, { params: { limit: 100 } }) 
 			if (response.status === 200) {
 				setPromises(response.data.Items)
 			}
