@@ -5,8 +5,6 @@ import './App.css';
 import Main from './pages/main';
 import PolicyEn from './pages/policyEn';
 import PolicyRu from './pages/policyRu';
-import LanguagePicker from './components/LanguagePicker';
-import PolicyLinks from './components/PolicyLinks';
 
 
 const App = () => {

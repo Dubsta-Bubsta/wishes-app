@@ -88,6 +88,7 @@ const Dropdown = (props: PropsType) => {
                         <Input
                             value={search.search}
                             onChange={(e: any) => { search.setSearch(e.target.value) }}
+                            onFocus={() => setOpen(true)}
                             placeholder={placeholder}
                         />  : 
 

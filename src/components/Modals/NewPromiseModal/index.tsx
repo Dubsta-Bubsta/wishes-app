@@ -10,6 +10,7 @@ import { CustomField, Textarea } from '../../common/FormComponents/FormComponent
 import LocationDropdown from '../../PromisesBlock/SearchBlock/Blocks/LocationDropdown'
 import { useGetCountries } from '../../../hooks/useGetCountries'
 import { useTranslation } from 'react-i18next'
+import BirthdayDropdown from '../../PromisesBlock/SearchBlock/Blocks/BirthDropdown'
 
 type PropsType = {
 	open: boolean
@@ -52,6 +53,7 @@ const NewPromise: FC<PropsType> = ({ open, setOpen }) => {
 	}
 
 	const [location, setLocation] = useState('')
+	const [bday, setBday] = useState('')
 	const { countries, searchText, setSearchText, } = useGetCountries()
 
 
@@ -96,7 +98,7 @@ const NewPromise: FC<PropsType> = ({ open, setOpen }) => {
 
 								style={{ height: 42 }}
 							/>
-							<CustomField name="bday" placeholder={t('placeholders.birth')} />
+							<BirthdayDropdown bday={bday} setBday={setBday}	/>
 						</div>
 
 						<CustomField

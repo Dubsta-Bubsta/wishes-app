@@ -45,6 +45,9 @@
 			margin-right: 10px;
 		}
 		& .share-btn {
+			&:active {
+				background: rgb(145, 145, 145);
+			}
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -62,7 +65,7 @@
 @media all and (max-width: 768px) {
 	.promise-modal {
 		margin: 0 auto;
-		padding: 20px;
+		padding: 40px 20px;
 		min-width: auto;
 		& .promise-name {
 			font-size: 26px;

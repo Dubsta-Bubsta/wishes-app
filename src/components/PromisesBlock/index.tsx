@@ -18,9 +18,10 @@ const PromisesBlock = () => {
 
 
     const [page, setPage] = useState(1)
+    const [totalCount, setTotalCount] = useState(0)
     const [promises, setPromises] = useState<Array<PromiseType>>([])
     const [loading, setLoading] = useState(false)
-    const [hasMore, setHasMore] = useState(false)
+    const limit = 15
 
     useEffect(() => {
 		let source = Axios.CancelToken.source();
@@ -38,7 +39,7 @@ const PromisesBlock = () => {
     const getPromises = async (cancelToken: CancelToken) => {
         let options = {
             page,
-            limit: 100,
+            limit,
         }
         options = getOption(options, "name", debouncedName)
         options = getOption(options, "location", location)
@@ -51,11 +52,12 @@ const PromisesBlock = () => {
 			} else {
 				setPromises([...promises, ...response.data.Items])
             }
-            if (response.data.LastEvaluatedKey) {
-                setHasMore(true)
-            } else {
-                setHasMore(false)
-            }
+            setTotalCount(response.data.ScannedCount)
+            // if (response.data.LastEvaluatedKey) {
+            //     setHasMore(true)
+            // } else {
+            //     setHasMore(false)
+            // }
 		}
     }
     
@@ -71,7 +73,7 @@ const PromisesBlock = () => {
 
             <PromisesList
                 promises={promises}
-                hasMore={hasMore}
+                hasMore={totalCount > page * limit}
                 getMore={() => setPage(page + 1) }
             />
         </div>
